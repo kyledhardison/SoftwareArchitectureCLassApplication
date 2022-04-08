@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -92,6 +92,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AutomationAPI_TextureBuilder.h" />
+    <ClInclude Include="AutomationAPI_TextureCollection.h" />
     <ClInclude Include="AutomationBindingExports.h" />
     <ClInclude Include="AutomationAPI_Wire.h" />
     <ClInclude Include="AutomationAPI_Block.h" />
@@ -106,6 +108,7 @@
     <ClInclude Include="AutomationAPI_RoutingCollection.h" />
     <ClInclude Include="AutomationAPI_Session.h" />
     <ClInclude Include="AutomationAPI_WireBuilder.h" />
+    <ClInclude Include="AutomationAPI_Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Block.cpp" />
@@ -118,6 +121,7 @@
     <ClCompile Include="Part.cpp" />
     <ClCompile Include="RoutingCollection.cpp" />
     <ClCompile Include="Session.cpp" />
+    <ClCompile Include="TextureCollection.cpp" />
     <ClCompile Include="Wire.cpp" />
     <ClCompile Include="WireBuilder.cpp" />
   </ItemGroup>

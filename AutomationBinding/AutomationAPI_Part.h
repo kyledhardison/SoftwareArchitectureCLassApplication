@@ -9,6 +9,7 @@ namespace AutomationAPI
 
 	class FeatureCollection;
 	class RoutingCollection;
+	class TextureCollection;
 	class PartImpl;
 	/// <summary>
 	/// Represents a part file in our sample CAD application.
@@ -38,6 +39,12 @@ namespace AutomationAPI
 			* Returns the Routing collection for the part.
 			*/
 			RoutingCollection* Routing();
+
+			/**
+			* Returns the Texture collection for the part.
+			*/
+			TextureCollection* Texture();
+
 			/*
 			* Internal Usage only.
 			*/

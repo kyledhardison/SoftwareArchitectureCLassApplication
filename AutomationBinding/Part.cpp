@@ -3,6 +3,7 @@
 #include "..\AppPartOps\PartOps.h"
 #include "AutomationAPI_FeatureCollection.h"
 #include "AutomationAPI_RoutingCollection.h"
+#include "AutomationAPI_TextureCollection.h"
 #include "..\AppPartOps\Journaling_Part.h"
 
 using namespace AutomationAPI;
@@ -15,6 +16,7 @@ namespace AutomationAPI
 
 		FeatureCollection* Features();
 		RoutingCollection* Routing();
+		TextureCollection* Texture();
 
 		virtual ~PartImpl();
 		PartImpl() = delete;
@@ -23,6 +25,7 @@ namespace AutomationAPI
 		int m_guid;
 		FeatureCollection* m_featureCollection;
 		RoutingCollection* m_routingCollection;
+		TextureCollection* m_textureCollection;
 
 	};
 }
@@ -105,5 +108,15 @@ AutomationAPI::FeatureCollection* AutomationAPI::PartImpl::Features()
 AutomationAPI::FeatureCollection* AutomationAPI::Part::Features()
 {
 	return m_partImpl->Features();
+}
+
+AutomationAPI::TextureCollection* AutomationAPI::PartImpl::Texture()
+{
+	return m_textureCollection;
+}
+
+AutomationAPI::TextureCollection* AutomationAPI::Part::Texture()
+{
+	return m_partImpl->Texture();
 }
 

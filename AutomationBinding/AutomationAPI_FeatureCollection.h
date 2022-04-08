@@ -4,6 +4,8 @@ namespace AutomationAPI
 {
 	class BlockBuilder;
 	class Block;
+	class TextureBuilder;
+	class Texture;
 	/// <summary>
 	/// FeatureCollection comment
 	/// </summary>
@@ -21,6 +23,13 @@ namespace AutomationAPI
 			/// create mode, otherwise it be in edit mode.</param>
 			/// <returns></returns>
 			BlockBuilder* CreateBlockBuilder(Block* block);
+
+			/// <summary>
+			/// Create a Texture Builder.
+			/// </summary>
+			/// <param name="texture"></param>
+			/// <returns></returns>
+			TextureBuilder* CreateTextureBuilder(Texture* texture);
 
 
 		private:

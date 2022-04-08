@@ -6,6 +6,8 @@
 #include "..\AppLibrary\Block.h"
 #include "..\AppLibrary\BlockBuilder.h"
 #include "..\AppPartOps\PartOps.h"
+#include "..\AppLibrary\Texture.h"
+#include "..\AppLibrary\TextureBuilder.h"
 
 AutomationAPI::FeatureCollection::FeatureCollection(int guid) : m_guid(guid)
 {
@@ -42,4 +44,16 @@ AutomationAPI::BlockBuilder* AutomationAPI::FeatureCollection::CreateBlockBuilde
 
 	return AutomationAPI::BlockBuilder::CreateBlockBuilder(guidBlockBuilder);
 
+}
+
+AutomationAPI::TextureBuilder* AutomationAPI::FeatureCollection::CreateTextureBuilder(AutomationAPI::Texture* texture)
+{
+	// TODO implement these objects for real
+	Application::PartFile* part = nullptr;
+	Application::Texture* appTexture = nullptr;
+
+	Application::TextureBuilder* textureBuilder =
+		Journaling_FeatureCollection_CreateTextureBuilder(part, appTexture);
+
+	return nullptr;
 }
